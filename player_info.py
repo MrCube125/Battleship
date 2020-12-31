@@ -30,31 +30,6 @@ def get_length(ship_name):
     else:
         return None
 
-# def add_ships_player(board):
-#     for i in SHIPS:
-#         print("This ship is a " + i + ". It is", str(get_length(i)), "cells long.")
-#         row = input("Enter a row (A-J): ")
-#         col = int(input("Enter a col (1-10): "))
-#         direction = input("Enter a direction (N, S, W, E): ")
-#         is_not_valid = ord(row) < ASCII_A or ord(row) > ASCII_J or col < 1 or col > 10 or not (direction in DIRECTIONS)
-#         while is_not_valid:
-#             print("You entered an invalid value!")
-#             row = input("Enter a row (A-J): ")
-#             col = int(input("Enter a col (1-10): "))
-#             direction = input("Enter a direction (N, S, W, E): ")
-#         ship = set_ship_player(i, direction, (row + str(col)))
-#         invalid_ship = add_ship(ship, board) == OFF_BOARD or add_ship(ship, board) == OVERLAP
-#         if invalid_ship:
-#             while is_not_valid and invalid_ship:
-#                 print("The value you entered was not compatible with the current board!")
-#                 row = input("Enter a row (A-J): ")
-#                 col = int(input("Enter a col (1-10): "))
-#                 direction = input("Enter a direction (N, S, W, E): ")
-#             else:
-#                 print("Everything is fine...")
-#         board = add_ship(ship, board)
-#         print_board(board)
-
 def check_and_set_ship_player(ship_name, board):
     while True:
         print("\nThis ship is a " + ship_name + ". It is", str(get_length(ship_name)), "cells long.")
@@ -88,7 +63,12 @@ def check_and_set_ship_player(ship_name, board):
         ship = set_ship_player(ship_name, direction, (row + str(col)))
         result = add_ship(ship, board)
         if (result == OFF_BOARD or result == OVERLAP):
-            print("OOPS => OFF_BOARD or OVERLAP, Please try again...")
+            if result == OFF_BOARD and result == OVERLAP:
+                print("OFF BOARD AND OVERLAP! Please try again...")
+            elif result == OFF_BOARD:
+                print("OFF BOARD! Please try again...")
+            elif result == OVERLAP:
+                print("OVERLAP! Please try again...")
             continue
         else:
             return board
@@ -99,6 +79,3 @@ def add_ships_player(board):
         print_board(new_board)
 
     return new_board
-
-# board = create_board()
-# add_ships_player(board)

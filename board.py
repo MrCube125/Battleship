@@ -34,19 +34,16 @@ def add_ship(ship, board):
     game_board = board.copy()
     row = int(ship.to_coordinates()[0])
     col = int(ship.to_coordinates()[1])
-    # print(row, col, ship.direction)
 
     if (ship.direction == "N" and row - ship.length < 0) or \
         (ship.direction == "S" and row + ship.length > 11) or \
         (ship.direction == "W" and col - ship.length < 0) or \
         (ship.direction == "E" and col + ship.length > 11):
-        # print_board(board)
         return OFF_BOARD
 
     for i in range(ship.length):
         # check if the cell is occupied
         if game_board[row][col] == "X ":
-            # print_board(board)
             return OVERLAP
 
         if ship.direction == "N":

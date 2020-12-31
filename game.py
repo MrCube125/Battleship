@@ -1,12 +1,11 @@
 import random
-from battleships.board import create_board, add_ship, print_board, OFF_BOARD, OVERLAP
+from battleships.board import add_ship, OFF_BOARD, OVERLAP
 from battleships.ships import DIRECTIONS, Carrier, Battleship, Cruiser, Submarine, Destroyer, ASCII_A, ASCII_J
-from copy import copy, deepcopy
+from copy import deepcopy
 
 SHIPS = ["Carrier", "Battleship", "Cruiser", "Submarine", "Destroyer"]
 
 def fire(position, board):
-    # print_board(board)
     row = ord(position[0]) - 64
     col = int(position[1:])
     game_board = board.copy()
@@ -52,7 +51,6 @@ def set_ship_position(ship):
 
 def generate_ships(board):
     for ship in SHIPS:
-        # print (ship)
         while True:
             current_ship = set_ship_position(ship)
             result = add_ship(current_ship, board)
@@ -68,7 +66,3 @@ def has_won(board):
         if "X " in i:
             return False
     return True
-
-# board = create_board()
-# board = generate_ships(board)
-# print_board(board)

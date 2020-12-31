@@ -11,6 +11,7 @@ def set_fire_position():
             row = input("Enter a row (A-J): ")
             row = row.upper()
             if ord(row) < ASCII_A or ord(row) > ASCII_J:
+                print("Invalid input!")
                 continue
             else:
                 break
@@ -20,6 +21,7 @@ def set_fire_position():
         try:
             col = int(input("Enter a col (1-10): "))
             if col < 1 or col > 10:
+                print("Invalid input!")
                 continue
             else:
                 break
