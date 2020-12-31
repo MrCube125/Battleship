@@ -28,33 +28,6 @@ def set_fire_position():
 
     return (row, col)
 
-# if __name__ == "__main__":
-#     computer_board = create_board()
-#     computer_board = generate_ships(computer_board)
-#     print_board(computer_board)
-#
-#     player_board = create_board()
-#     player_board = add_ships_player(player_board)
-#     print_board(player_board)
-#
-#     while not has_won(computer_board) and not has_won(player_board):
-#         print("Chose a position to fire at!")
-#         position = set_fire_position()
-#         computer_board = fire(position[0] + str(position[1]), computer_board)
-#         print_board(fire_board(computer_board))
-#
-#         player_board = fire(chr(random.randint(ASCII_A, ASCII_J)) + str(random.randint(1, 10)), player_board)
-#         print("Player board:")
-#         print_board(player_board)
-#     print("Game Over!")
-#     if has_won(computer_board):
-#         print("Good job player! You won by sinking all of your opponent's ships.")B
-#         #has_won(board) checks if there are remaining ships
-#         #since the computer_board has no remaining ships, the player won
-#     else:
-#         print("Oh no! You lose, your opponent sunk all of your ships.")
-
-
 if __name__ == "__main__":
     computer_board = create_board()
     computer_board = generate_ships(computer_board)
