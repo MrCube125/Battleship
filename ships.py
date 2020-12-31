@@ -1,6 +1,3 @@
-import random
-import time
-
 DIRECTIONS = ["N", "S", "E", "W"]
 MIN_SHIP_LENGTH = 2
 MAX_SHIP_LENGTH = 5
