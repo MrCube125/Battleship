@@ -12,7 +12,6 @@ After you set all the ships, you and the computer will take turns firing at each
 This will repeat until one of you wins.
 
 How can an input be invalid?
-----------------------------
 
 When the computer asks for a row, you give it something other than [A, B, C, D, E, F, G, H, I, J]. If you type in a lowercase version of one of these valid responses, the computer will convert it and move on.
 e.g. Enter a row: RE%^UDYFTUGOfguh9y7gy8oubhij  ===> INVALID
