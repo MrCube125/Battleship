@@ -3,6 +3,10 @@
 
 This is a Battleship game.
 
+How to run:
+-
+$ bash run.sh
+
 Instructions
 -
 

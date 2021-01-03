@@ -1,6 +1,6 @@
-from battleships.game import SHIPS, DIRECTIONS
-from battleships.ships import ASCII_A, ASCII_J, Carrier, Battleship, Cruiser, Submarine, Destroyer, CARRIER_LEN, BATTLESHIP_LEN, CRUISER_LEN, SUBMARINE_LEN, DESTROYER_LEN
-from battleships.board import add_ship, OFF_BOARD, OVERLAP, create_board, print_board
+from game import SHIPS, DIRECTIONS
+from ships import ASCII_A, ASCII_J, Carrier, Battleship, Cruiser, Submarine, Destroyer, CARRIER_LEN, BATTLESHIP_LEN, CRUISER_LEN, SUBMARINE_LEN, DESTROYER_LEN
+from board import add_ship, OFF_BOARD, OVERLAP, create_board, print_board
 
 def set_ship_player(ship, direction, position):
     if (ship == "Carrier"):

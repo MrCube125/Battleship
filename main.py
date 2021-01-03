@@ -1,7 +1,7 @@
-from battleships.game import generate_ships, has_won, fire, fire_board
-from battleships.board import create_board, print_board
-from battleships.player_info import add_ships_player
-from battleships.ships import ASCII_A, ASCII_J
+from game import generate_ships, has_won, fire, fire_board
+from board import create_board, print_board
+from player_info import add_ships_player
+from ships import ASCII_A, ASCII_J
 
 import random
 

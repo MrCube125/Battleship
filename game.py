@@ -1,6 +1,6 @@
 import random
-from battleships.board import add_ship, OFF_BOARD, OVERLAP
-from battleships.ships import DIRECTIONS, Carrier, Battleship, Cruiser, Submarine, Destroyer, ASCII_A, ASCII_J
+from board import add_ship, OFF_BOARD, OVERLAP
+from ships import DIRECTIONS, Carrier, Battleship, Cruiser, Submarine, Destroyer, ASCII_A, ASCII_J
 from copy import deepcopy
 
 SHIPS = ["Carrier", "Battleship", "Cruiser", "Submarine", "Destroyer"]
